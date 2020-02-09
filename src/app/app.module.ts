@@ -11,7 +11,7 @@ import { CoreModule } from './core/core.module';
 import { UserModule } from './user/user.module';
 import { EventsModule } from './events/events.module';
 import { HttpClientModule } from '@angular/common/http';
-import { DetailsComponent } from './event/details/details.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import { DetailsComponent } from './event/details/details.component';
     RegisterComponent,
     LoginComponent,
     PageNotFoundComponent,
-    DetailsComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -29,6 +29,12 @@ import { DetailsComponent } from './event/details/details.component';
      UserModule,
     AppRoutingModule, 
     EventsModule
+  ],
+  exports:[
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    PageNotFoundComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
