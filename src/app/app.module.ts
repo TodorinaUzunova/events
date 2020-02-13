@@ -33,7 +33,11 @@ import { PasswordsMatchDirective } from './shared/validators/directives/password
     ReactiveFormsModule,
      UserModule,
     AppRoutingModule, 
-    EventsModule
+    EventsModule,
+      KinveyModule.init({
+      appKey: 'kid_rJ_PXY02S',
+      appSecret: 'eb18e36a686e4488bbd362263d05cc6b'
+    })
   ],
   exports:[
     HomeComponent,
