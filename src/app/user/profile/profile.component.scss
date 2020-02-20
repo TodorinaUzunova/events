@@ -1,0 +1,21 @@
+.profile-img{
+    margin: 10px auto;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+  
+  .profile-info{
+    padding: 10px;
+  }
+  h3 > span{
+    color:darkblue;
+    font-weight: bold;
+  }
+
+  p.infoType{
+      color:red
+  }

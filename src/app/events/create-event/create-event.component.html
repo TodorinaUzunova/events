@@ -1,0 +1,37 @@
+
+
+<form formGroup='form' (ngSubmit)="createEventHandler()">
+    <div class="text-center mb-4">
+      <h1 class="h3 mb-3 font-weight-normal">Organize Event</h1>
+      <p>Fill up the following information!</p>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text" id="inputEventName" formControlName="event" class="form-control" placeholder="Event">
+      <label for="inputEventName">Event</label>
+      <p class="error-message" *ngIf="form.get('event').invalid && form.get('event').touched">Enter event name</p>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text" id="inpuEventDate" formControlName="dateTime" class="form-control" placeholder="Date" >
+      <label for="inpuEventDate">Date</label>
+      <p class="error-message" *ngIf="form.get('dateTime').invalid && form.get('dateTime').touched">Enter event name</p>
+    </div>
+
+    <div class="form-label-group">
+      <textarea type="text" id="inputEventDescription" formControlName="description" class="form-control" placeholder="Description"></textarea>
+      <label for="inputEventDescription">Description</label>
+      <p class="error-message" *ngIf="form.get('description').invalid && form.get('description').touched">Description should be > 50 symbols!</p>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text" id="inputEventImage" formControlName="imageURL" class="form-control" placeholder="Image" pattern="https?:\/\/.*">
+      <label for="inputEventImage">Image</label>
+      <p class="error-message" *ngIf="form.get('imageURL').invalid && form.get('imageURL').touched">Please provide valid url</p>
+    </div>
+
+    <button [disabled]="form.invalid" class="btn btn-lg btn-dark btn-block">Organize it</button>
+
+    <p class="mt-5 mb-3 text-muted text-center">© UniEnt - 2020.</p>
+
+  </form>

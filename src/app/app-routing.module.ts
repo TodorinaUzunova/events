@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent,
-    //canActivate:[AuthenticationGuard],
+    canActivate:[AuthenticationGuard],
     data:{
       isLogged:false,
     }
@@ -27,7 +27,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    //canActivate:[AuthenticationGuard],
+    canActivate:[AuthenticationGuard],
     data:{
       isLogged:false,
     }
