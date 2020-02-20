@@ -12,7 +12,9 @@ import { CoreModule } from './core/core.module';
 import { UserModule } from './user/user.module';
 import { EventsModule } from './events/events.module';
 import { HttpClientModule } from '@angular/common/http';
+import { KinveyModule } from 'kinvey-angular-sdk';
 import { PasswordsMatchDirective } from './shared/validators/directives/passwords-match.directive';
+import { VerfifyKinveyComponent } from './verfify-kinvey/verfify-kinvey.component';
 
 
 @NgModule({
@@ -22,11 +24,16 @@ import { PasswordsMatchDirective } from './shared/validators/directives/password
     RegisterComponent,
     LoginComponent,
     PageNotFoundComponent,
-    PasswordsMatchDirective
+    PasswordsMatchDirective,
+    VerfifyKinveyComponent
     
   ],
   imports: [
     BrowserModule,
+    KinveyModule.init({
+      appKey: 'kid_rJ_PXY02S',
+      appSecret: 'eb18e36a686e4488bbd362263d05cc6b'
+    }),
     CoreModule,
     HttpClientModule,
     FormsModule,
@@ -34,10 +41,7 @@ import { PasswordsMatchDirective } from './shared/validators/directives/password
      UserModule,
     AppRoutingModule, 
     EventsModule,
-      KinveyModule.init({
-      appKey: 'kid_rJ_PXY02S',
-      appSecret: 'eb18e36a686e4488bbd362263d05cc6b'
-    })
+  
   ],
   exports:[
     HomeComponent,
